@@ -9,11 +9,9 @@
 import UIKit
 
 class MainController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "JBridge"
     }
 
     override func didReceiveMemoryWarning() {

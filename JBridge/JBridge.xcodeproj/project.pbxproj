@@ -11,6 +11,8 @@
 		475A20851EAA2200001450A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475A20841EAA2200001450A3 /* Assets.xcassets */; };
 		475A20881EAA2200001450A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475A20861EAA2200001450A3 /* LaunchScreen.storyboard */; };
 		475A20921EAB9AC1001450A3 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475A20911EAB9AC1001450A3 /* MainController.swift */; };
+		475A20961EABAE38001450A3 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475A20951EABAE38001450A3 /* TestController.swift */; };
+		475A20981EABC0F2001450A3 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 475A20971EABC0F2001450A3 /* test.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		475A20871EAA2200001450A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		475A20891EAA2200001450A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		475A20911EAB9AC1001450A3 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		475A20951EABAE38001450A3 /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		475A20971EABC0F2001450A3 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				475A20821EAA2200001450A3 /* AppDelegate.swift */,
+				475A20951EABAE38001450A3 /* TestController.swift */,
 				475A20911EAB9AC1001450A3 /* MainController.swift */,
+				475A20971EABC0F2001450A3 /* test.html */,
 				475A20841EAA2200001450A3 /* Assets.xcassets */,
 				475A20861EAA2200001450A3 /* LaunchScreen.storyboard */,
 				475A20891EAA2200001450A3 /* Info.plist */,
@@ -123,6 +129,7 @@
 			files = (
 				475A20851EAA2200001450A3 /* Assets.xcassets in Resources */,
 				475A20881EAA2200001450A3 /* LaunchScreen.storyboard in Resources */,
+				475A20981EABC0F2001450A3 /* test.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475A20961EABAE38001450A3 /* TestController.swift in Sources */,
 				475A20921EAB9AC1001450A3 /* MainController.swift in Sources */,
 				475A20831EAA2200001450A3 /* AppDelegate.swift in Sources */,
 			);
@@ -251,6 +259,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FN82QTBZ23;
 				INFOPLIST_FILE = JBridge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffery.JBridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -264,6 +273,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FN82QTBZ23;
 				INFOPLIST_FILE = JBridge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffery.JBridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";

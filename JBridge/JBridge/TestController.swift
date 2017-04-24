@@ -60,6 +60,9 @@ extension TestController: UIWebViewDelegate {
         jsContext!.exceptionHandler = { (context, exception) -> () in
             print("exception = \(String(describing: exception))")
         }
+        
+        // swift call JS
+        swiftCallJS()
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
@@ -69,6 +72,36 @@ extension TestController: UIWebViewDelegate {
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         print("------加载失败------")
+    }
+    
+    // MARK: Test Method
+    func swiftCallJS() {
+        
+        guard let jscontext = jsContext else {
+            return
+        }
+        jscontext.evaluateScript("function addMethod(num1, num2){ return num1 + num2 }")
+        
+        // 方式一：用js调用方法
+        let addResult1 = jscontext.evaluateScript("addMethod(99, 11)")
+        if let addResult1 = addResult1 {
+            print("addResult1 = \(String(describing: addResult1.toNumber()))")
+        }
+        
+        // 方式二：OC中调用js的调用
+        let methodValue = jscontext.objectForKeyedSubscript("addMethod")
+        guard let methodvalue = methodValue else {
+            return
+        }
+        let addResult2 = methodvalue.call(withArguments: [99, 11])
+        if let addResult2 = addResult2 {
+            print("addResult2 = \(String(describing: addResult2.toNumber()))")
+        }
+        
+    }
+    
+    func JSCallSwift() {
+        
     }
     
 }

@@ -61,8 +61,11 @@ extension TestController: UIWebViewDelegate {
             print("exception = \(String(describing: exception))")
         }
         
-        // swift call JS
-        swiftCallJS()
+//        // swift call JS
+//        swiftCallJS()
+        
+        // JS call swift
+        JSCallSwift()
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
@@ -111,6 +114,30 @@ extension TestController: UIWebViewDelegate {
     }
     
     func JSCallSwift() {
+        
+        guard let jscontext = jsContext else {
+            return
+        }
+        
+        // 第一种方式：block/closure
+        // 第一步：创建一个类型是@convention(block) (type) -> (type)的block/closure.这其实就是js调用swift后的执行block/closure
+        // 第二步：使用unsafeBitCast转换类型
+        // 第三步：使用jscontext.setObject(alertViewObject, forKeyedSubscript: "showAlertView" as (NSCopying & NSObjectProtocol))
+        let showAlert: @convention(block) () -> () = {
+            let alertView = UIAlertView.init(title: "AlertView", message: "JS Call Swift", delegate: nil, cancelButtonTitle: "取消", otherButtonTitles: "确定")
+            alertView.show()
+        }
+        let alertViewObject = unsafeBitCast(showAlert, to: AnyObject.self)
+        // 这里的showAlertView是在js中的
+        jscontext.setObject(alertViewObject, forKeyedSubscript: "showAlertView" as (NSCopying & NSObjectProtocol)!)
+        
+        
+        let showActionSheet: @convention(block) () -> () = {
+            let actionSheet = UIActionSheet.init(title: "ActionSheet", delegate: nil, cancelButtonTitle: "Cancel", destructiveButtonTitle: "destructive", otherButtonTitles: "other")
+            actionSheet.show(in: self.view)
+        }
+        let actionSheetObject = unsafeBitCast(showActionSheet, to: AnyObject.self)
+        jscontext.setObject(actionSheetObject, forKeyedSubscript: "showActionSheet" as (NSCopying & NSObjectProtocol)!)
         
     }
     

@@ -54,10 +54,11 @@ extension TestController: UIWebViewDelegate {
         
         jsContext = webView.value(forKeyPath: "documentView.webView.mainFrame.javaScriptContext") as? JSContext
         
-        guard jsContext != nil else {
+        guard let jscontext = jsContext else {
             return
         }
-        jsContext!.exceptionHandler = { (context, exception) -> () in
+
+        jscontext.exceptionHandler = { (context, exception) -> () in
             print("exception = \(String(describing: exception))")
         }
         
@@ -124,7 +125,11 @@ extension TestController: UIWebViewDelegate {
         // 第二步：使用unsafeBitCast转换类型
         // 第三步：使用jscontext.setObject(alertViewObject, forKeyedSubscript: "showAlertView" as (NSCopying & NSObjectProtocol))
         let showAlert: @convention(block) () -> () = {
-            let alertView = UIAlertView.init(title: "AlertView", message: "JS Call Swift", delegate: nil, cancelButtonTitle: "取消", otherButtonTitles: "确定")
+            let alertView = UIAlertView.init(title: "AlertView",
+                                             message: "JS Call Swift",
+                                             delegate: nil,
+                                             cancelButtonTitle: "取消",
+                                             otherButtonTitles: "确定")
             alertView.show()
         }
         let alertViewObject = unsafeBitCast(showAlert, to: AnyObject.self)
@@ -133,12 +138,15 @@ extension TestController: UIWebViewDelegate {
         
         
         let showActionSheet: @convention(block) () -> () = {
-            let actionSheet = UIActionSheet.init(title: "ActionSheet", delegate: nil, cancelButtonTitle: "Cancel", destructiveButtonTitle: "destructive", otherButtonTitles: "other")
+            let actionSheet = UIActionSheet.init(title: "ActionSheet",
+                                                 delegate: nil,
+                                                 cancelButtonTitle: "Cancel",
+                                                 destructiveButtonTitle: "destructive",
+                                                 otherButtonTitles: "other")
             actionSheet.show(in: self.view)
         }
         let actionSheetObject = unsafeBitCast(showActionSheet, to: AnyObject.self)
         jscontext.setObject(actionSheetObject, forKeyedSubscript: "showActionSheet" as (NSCopying & NSObjectProtocol)!)
         
     }
-    
 }

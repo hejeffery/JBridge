@@ -13,6 +13,7 @@
 		475A20921EAB9AC1001450A3 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475A20911EAB9AC1001450A3 /* MainController.swift */; };
 		475A20961EABAE38001450A3 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475A20951EABAE38001450A3 /* TestController.swift */; };
 		475A20981EABC0F2001450A3 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 475A20971EABC0F2001450A3 /* test.html */; };
+		47CD33241EB18BA000D0B949 /* JBridgeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD33231EB18BA000D0B949 /* JBridgeProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		475A20911EAB9AC1001450A3 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		475A20951EABAE38001450A3 /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		475A20971EABC0F2001450A3 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		47CD33231EB18BA000D0B949 /* JBridgeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBridgeProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				475A20821EAA2200001450A3 /* AppDelegate.swift */,
 				475A20951EABAE38001450A3 /* TestController.swift */,
 				475A20911EAB9AC1001450A3 /* MainController.swift */,
+				47CD33231EB18BA000D0B949 /* JBridgeProtocol.swift */,
 				475A20971EABC0F2001450A3 /* test.html */,
 				475A20841EAA2200001450A3 /* Assets.xcassets */,
 				475A20861EAA2200001450A3 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				475A20961EABAE38001450A3 /* TestController.swift in Sources */,
+				47CD33241EB18BA000D0B949 /* JBridgeProtocol.swift in Sources */,
 				475A20921EAB9AC1001450A3 /* MainController.swift in Sources */,
 				475A20831EAA2200001450A3 /* AppDelegate.swift in Sources */,
 			);
@@ -300,6 +304,7 @@
 				475A208E1EAA2200001450A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -124,6 +124,8 @@ extension TestController: UIWebViewDelegate {
         // 第一步：创建一个类型是@convention(block) (type) -> (type)的block/closure.这其实就是js调用swift后的执行block/closure
         // 第二步：使用unsafeBitCast转换类型
         // 第三步：使用jscontext.setObject(alertViewObject, forKeyedSubscript: "showAlertView" as (NSCopying & NSObjectProtocol))
+        
+        // show alertView
         let showAlert: @convention(block) () -> () = {
             let alertView = UIAlertView.init(title: "AlertView",
                                              message: "JS Call Swift",
@@ -136,7 +138,7 @@ extension TestController: UIWebViewDelegate {
         // 这里的showAlertView是在js中的
         jscontext.setObject(alertViewObject, forKeyedSubscript: "showAlertView" as (NSCopying & NSObjectProtocol)!)
         
-        
+        // show ActionSheet
         let showActionSheet: @convention(block) () -> () = {
             let actionSheet = UIActionSheet.init(title: "ActionSheet",
                                                  delegate: nil,

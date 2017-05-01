@@ -132,6 +132,7 @@ extension TestController: UIWebViewDelegate {
                                              delegate: nil,
                                              cancelButtonTitle: "取消",
                                              otherButtonTitles: "确定")
+            
             alertView.show()
         }
         let alertViewObject = unsafeBitCast(showAlert, to: AnyObject.self)
@@ -145,6 +146,7 @@ extension TestController: UIWebViewDelegate {
                                                  cancelButtonTitle: "Cancel",
                                                  destructiveButtonTitle: "destructive",
                                                  otherButtonTitles: "other")
+            
             actionSheet.show(in: self.view)
         }
         let actionSheetObject = unsafeBitCast(showActionSheet, to: AnyObject.self)

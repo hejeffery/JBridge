@@ -25,7 +25,6 @@ class TestController: UIViewController {
             webView.loadRequest(request);
         }
         return webView
-
     }()
     
     override func viewDidLoad() {

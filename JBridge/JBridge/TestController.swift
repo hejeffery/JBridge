@@ -14,6 +14,7 @@ class TestController: UIViewController {
     fileprivate var jsContext: JSContext?
 
     private lazy var webView: UIWebView = {
+
         let webView = UIWebView()
         webView.delegate = self
         
@@ -24,6 +25,7 @@ class TestController: UIViewController {
             webView.loadRequest(request);
         }
         return webView
+
     }()
     
     override func viewDidLoad() {

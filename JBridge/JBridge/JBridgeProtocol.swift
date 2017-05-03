@@ -14,7 +14,7 @@ import JavaScriptCore
 */
 @objc public protocol JBridgeProtocol: JSExport {
 
-    static func showAlert(_ title: String, message: String)
+    func showAlert(_ title: String, message: String, left: String, right: String)
     
-    static func showActionSheet()
+    func showActionSheet(_ title: String, destructive: String, others: [String])
 }

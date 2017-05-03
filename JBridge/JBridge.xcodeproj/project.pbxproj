@@ -14,6 +14,8 @@
 		475A20961EABAE38001450A3 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475A20951EABAE38001450A3 /* TestController.swift */; };
 		475A20981EABC0F2001450A3 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 475A20971EABC0F2001450A3 /* test.html */; };
 		47CD33241EB18BA000D0B949 /* JBridgeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD33231EB18BA000D0B949 /* JBridgeProtocol.swift */; };
+		C1AB7B0A1EB87C6700967D52 /* JBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AB7B091EB87C6700967D52 /* JBridge.swift */; };
+		C1FCB40A1EB8820A00933789 /* main.html in Resources */ = {isa = PBXBuildFile; fileRef = C1FCB4091EB8820A00933789 /* main.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		475A20951EABAE38001450A3 /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		475A20971EABC0F2001450A3 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		47CD33231EB18BA000D0B949 /* JBridgeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBridgeProtocol.swift; sourceTree = "<group>"; };
+		C1AB7B091EB87C6700967D52 /* JBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBridge.swift; sourceTree = "<group>"; };
+		C1FCB4091EB8820A00933789 /* main.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = main.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,9 @@
 				475A20951EABAE38001450A3 /* TestController.swift */,
 				475A20911EAB9AC1001450A3 /* MainController.swift */,
 				47CD33231EB18BA000D0B949 /* JBridgeProtocol.swift */,
+				C1AB7B091EB87C6700967D52 /* JBridge.swift */,
 				475A20971EABC0F2001450A3 /* test.html */,
+				C1FCB4091EB8820A00933789 /* main.html */,
 				475A20841EAA2200001450A3 /* Assets.xcassets */,
 				475A20861EAA2200001450A3 /* LaunchScreen.storyboard */,
 				475A20891EAA2200001450A3 /* Info.plist */,
@@ -103,6 +109,7 @@
 					475A207E1EAA2200001450A3 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = FN82QTBZ23;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				475A20851EAA2200001450A3 /* Assets.xcassets in Resources */,
+				C1FCB40A1EB8820A00933789 /* main.html in Resources */,
 				475A20881EAA2200001450A3 /* LaunchScreen.storyboard in Resources */,
 				475A20981EABC0F2001450A3 /* test.html in Resources */,
 			);
@@ -146,6 +154,7 @@
 				475A20961EABAE38001450A3 /* TestController.swift in Sources */,
 				47CD33241EB18BA000D0B949 /* JBridgeProtocol.swift in Sources */,
 				475A20921EAB9AC1001450A3 /* MainController.swift in Sources */,
+				C1AB7B0A1EB87C6700967D52 /* JBridge.swift in Sources */,
 				475A20831EAA2200001450A3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,12 +270,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FN82QTBZ23;
 				INFOPLIST_FILE = JBridge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffery.JBridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -275,12 +287,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FN82QTBZ23;
 				INFOPLIST_FILE = JBridge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffery.JBridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

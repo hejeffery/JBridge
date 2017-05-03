@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AF6BB7A333A1A1F07D064B4 /* Pods_JBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37104E510A86669B14A7F53C /* Pods_JBridge.framework */; };
 		475A20831EAA2200001450A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475A20821EAA2200001450A3 /* AppDelegate.swift */; };
 		475A20851EAA2200001450A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475A20841EAA2200001450A3 /* Assets.xcassets */; };
 		475A20881EAA2200001450A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475A20861EAA2200001450A3 /* LaunchScreen.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37104E510A86669B14A7F53C /* Pods_JBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		475A207F1EAA2200001450A3 /* JBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475A20821EAA2200001450A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		475A20841EAA2200001450A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,8 +30,10 @@
 		475A20951EABAE38001450A3 /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		475A20971EABC0F2001450A3 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		47CD33231EB18BA000D0B949 /* JBridgeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBridgeProtocol.swift; sourceTree = "<group>"; };
+		673D0AB4D9CCC0ACAB41464B /* Pods-JBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JBridge.release.xcconfig"; path = "Pods/Target Support Files/Pods-JBridge/Pods-JBridge.release.xcconfig"; sourceTree = "<group>"; };
 		C1AB7B091EB87C6700967D52 /* JBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBridge.swift; sourceTree = "<group>"; };
 		C1FCB4091EB8820A00933789 /* main.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = main.html; sourceTree = "<group>"; };
+		E6B6EA66784E01F6CC3B2E4A /* Pods-JBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JBridge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JBridge/Pods-JBridge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF6BB7A333A1A1F07D064B4 /* Pods_JBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0903DF1BAA5FD16277A81B34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6B6EA66784E01F6CC3B2E4A /* Pods-JBridge.debug.xcconfig */,
+				673D0AB4D9CCC0ACAB41464B /* Pods-JBridge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3CB62CF174DB4ACCCB74D828 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37104E510A86669B14A7F53C /* Pods_JBridge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		475A20761EAA2200001450A3 = {
 			isa = PBXGroup;
 			children = (
 				475A20811EAA2200001450A3 /* JBridge */,
 				475A20801EAA2200001450A3 /* Products */,
+				0903DF1BAA5FD16277A81B34 /* Pods */,
+				3CB62CF174DB4ACCCB74D828 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 475A208C1EAA2200001450A3 /* Build configuration list for PBXNativeTarget "JBridge" */;
 			buildPhases = (
+				030137CCCDD4F7235A0AF184 /* [CP] Check Pods Manifest.lock */,
 				475A207B1EAA2200001450A3 /* Sources */,
 				475A207C1EAA2200001450A3 /* Frameworks */,
 				475A207D1EAA2200001450A3 /* Resources */,
+				7D43C7B3BC6DDCE23010FCAE /* [CP] Embed Pods Frameworks */,
+				EFDB4A4D7E3CE4D31C65A8C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		030137CCCDD4F7235A0AF184 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7D43C7B3BC6DDCE23010FCAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JBridge/Pods-JBridge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFDB4A4D7E3CE4D31C65A8C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JBridge/Pods-JBridge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		475A207B1EAA2200001450A3 /* Sources */ = {
@@ -268,6 +343,7 @@
 		};
 		475A208D1EAA2200001450A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6B6EA66784E01F6CC3B2E4A /* Pods-JBridge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -285,6 +361,7 @@
 		};
 		475A208E1EAA2200001450A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 673D0AB4D9CCC0ACAB41464B /* Pods-JBridge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

@@ -21,7 +21,7 @@ class JBridge: NSObject, JBridgeProtocol {
         DispatchQueue.main.async {
             let alertView = UIAlertView.init(title: title == "null" ? "提示" : title,
                                              message: message,
-                                             delegate: self as! UIAlertViewDelegate,
+                                             delegate: nil,
                                              cancelButtonTitle: left == "null" ? "取消" : left,
                                              otherButtonTitles: right == "null" ? "确定" : right)
             
@@ -31,7 +31,7 @@ class JBridge: NSObject, JBridgeProtocol {
     
     func showActionSheet(_ title: String, destructive: String, others: [String]) {
         let actionSheet = UIActionSheet.init(title: title == "null" ? "提示" : title,
-                                             delegate: self as! UIActionSheetDelegate,
+                                             delegate: nil,
                                              cancelButtonTitle: "取消",
                                              destructiveButtonTitle: destructive == "null" ? nil : destructive)
         
@@ -43,19 +43,5 @@ class JBridge: NSObject, JBridgeProtocol {
             return
         }
         actionSheet.show(in: controller.view)
-    }
-}
-
-extension JBridge: UIAlertViewDelegate {
-
-    func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
-        print("buttonIndex = \(buttonIndex)")
-    }
-}
-
-extension JBridge: UIActionSheetDelegate {
-    
-    func actionSheet(_ actionSheet: UIActionSheet, didDismissWithButtonIndex buttonIndex: Int) {
-        print("buttonIndex = \(buttonIndex)")
     }
 }

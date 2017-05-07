@@ -14,6 +14,7 @@
 		475A20921EAB9AC1001450A3 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475A20911EAB9AC1001450A3 /* MainController.swift */; };
 		475A20961EABAE38001450A3 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475A20951EABAE38001450A3 /* TestController.swift */; };
 		475A20981EABC0F2001450A3 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 475A20971EABC0F2001450A3 /* test.html */; };
+		47BC3C471EBF5DEA007D50C9 /* JBridgeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BC3C461EBF5DEA007D50C9 /* JBridgeController.swift */; };
 		47CD33241EB18BA000D0B949 /* JBridgeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD33231EB18BA000D0B949 /* JBridgeProtocol.swift */; };
 		C1AB7B0A1EB87C6700967D52 /* JBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AB7B091EB87C6700967D52 /* JBridge.swift */; };
 		C1FCB40A1EB8820A00933789 /* main.html in Resources */ = {isa = PBXBuildFile; fileRef = C1FCB4091EB8820A00933789 /* main.html */; };
@@ -29,6 +30,7 @@
 		475A20911EAB9AC1001450A3 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		475A20951EABAE38001450A3 /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		475A20971EABC0F2001450A3 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		47BC3C461EBF5DEA007D50C9 /* JBridgeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBridgeController.swift; sourceTree = "<group>"; };
 		47CD33231EB18BA000D0B949 /* JBridgeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBridgeProtocol.swift; sourceTree = "<group>"; };
 		673D0AB4D9CCC0ACAB41464B /* Pods-JBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JBridge.release.xcconfig"; path = "Pods/Target Support Files/Pods-JBridge/Pods-JBridge.release.xcconfig"; sourceTree = "<group>"; };
 		C1AB7B091EB87C6700967D52 /* JBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBridge.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				475A20911EAB9AC1001450A3 /* MainController.swift */,
 				47CD33231EB18BA000D0B949 /* JBridgeProtocol.swift */,
 				C1AB7B091EB87C6700967D52 /* JBridge.swift */,
+				47BC3C461EBF5DEA007D50C9 /* JBridgeController.swift */,
 				475A20971EABC0F2001450A3 /* test.html */,
 				C1FCB4091EB8820A00933789 /* main.html */,
 				475A20841EAA2200001450A3 /* Assets.xcassets */,
@@ -229,6 +232,7 @@
 				475A20961EABAE38001450A3 /* TestController.swift in Sources */,
 				47CD33241EB18BA000D0B949 /* JBridgeProtocol.swift in Sources */,
 				475A20921EAB9AC1001450A3 /* MainController.swift in Sources */,
+				47BC3C471EBF5DEA007D50C9 /* JBridgeController.swift in Sources */,
 				C1AB7B0A1EB87C6700967D52 /* JBridge.swift in Sources */,
 				475A20831EAA2200001450A3 /* AppDelegate.swift in Sources */,
 			);

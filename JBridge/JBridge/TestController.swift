@@ -68,7 +68,7 @@ extension TestController: UIWebViewDelegate {
 //        swiftCallJS()
         
         // JS call swift
-        JSCallSwift()
+        // JSCallSwift()
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {

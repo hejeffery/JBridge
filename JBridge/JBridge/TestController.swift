@@ -38,7 +38,7 @@ class TestController: UIViewController {
     }
 }
 
-// MARK: UIWebViewDelegate
+// MARK: - UIWebViewDelegate
 extension TestController: UIWebViewDelegate {
     
     func webViewDidStartLoad(_ webView: UIWebView) {
@@ -158,7 +158,7 @@ extension TestController: UIWebViewDelegate {
     }
 }
 
-// MARK: UIAlertViewDelegate
+// MARK: - UIAlertViewDelegate
 extension TestController: UIAlertViewDelegate {
 
     func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {

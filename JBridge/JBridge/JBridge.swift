@@ -43,5 +43,6 @@ class JBridge: NSObject, JBridgeProtocol {
             return
         }
         actionSheet.show(in: controller.view)
+
     }
 }

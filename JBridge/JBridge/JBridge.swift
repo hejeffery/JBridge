@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import JavaScriptCore
+import FCUUID
 
 class JBridge: NSObject, JBridgeProtocol {
     
@@ -30,19 +31,41 @@ class JBridge: NSObject, JBridgeProtocol {
     }
     
     func showActionSheet(_ title: String, destructive: String, others: [String]) {
-        let actionSheet = UIActionSheet.init(title: title == "null" ? "提示" : title,
-                                             delegate: nil,
-                                             cancelButtonTitle: "取消",
-                                             destructiveButtonTitle: destructive == "null" ? nil : destructive)
         
-        for item in others {
-            actionSheet.addButton(withTitle: item)
+        DispatchQueue.main.async {
+            let actionSheet = UIActionSheet.init(title: title == "null" ? "提示" : title,
+                                                 delegate: nil,
+                                                 cancelButtonTitle: "取消",
+                                                 destructiveButtonTitle: destructive == "null" ? nil : destructive)
+            
+            for item in others {
+                actionSheet.addButton(withTitle: item)
+            }
+            
+            guard let controller = self.controller else {
+                return
+            }
+            actionSheet.show(in: controller.view)
         }
-        
-        guard let controller = self.controller else {
-            return
-        }
-        actionSheet.show(in: controller.view)
-
+    }
+    
+    func fetchUUID() -> String {
+        return UIDevice.current.uuid()
+    }
+    
+    func fetchVendor() -> String {
+        return FCUUID.uuidForVendor()
+    }
+    
+    func fetchModel() -> String {
+        return UIDevice.current.model
+    }
+    
+    func fetchSystemVersion() -> String {
+        return UIDevice.current.systemVersion
+    }
+    
+    func fetchSystemName() -> String {
+        return UIDevice.current.systemName
     }
 }

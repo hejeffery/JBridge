@@ -17,4 +17,14 @@ import JavaScriptCore
     func showAlert(_ title: String, message: String, left: String, right: String)
     
     func showActionSheet(_ title: String, destructive: String, others: [String])
+    
+    func fetchUUID() -> String
+    
+    func fetchVendor() -> String
+    
+    func fetchModel() -> String
+    
+    func fetchSystemVersion() -> String
+    
+    func fetchSystemName() -> String
 }

@@ -27,4 +27,10 @@ import JavaScriptCore
     func fetchSystemVersion() -> String
     
     func fetchSystemName() -> String
+    
+    func call(_ number: String)
+    
+    func sendSms(_ number: String)
+    
+    func sendMail(_ mail: String)
 }

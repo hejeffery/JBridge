@@ -17,6 +17,8 @@ class JBridge: NSObject, JBridgeProtocol {
     
     weak var controller: UIViewController?
     
+    weak var webView: UIWebView?
+    
     func showAlert(_ title: String, message: String, left: String, right: String) {
 
         DispatchQueue.main.async {
@@ -68,4 +70,26 @@ class JBridge: NSObject, JBridgeProtocol {
     func fetchSystemName() -> String {
         return UIDevice.current.systemName
     }
+    
+    func call(_ number: String) {
+        DispatchQueue.main.async {
+            let callString = "tel://" + number
+            self.webView?.loadRequest(URLRequest(url: URL.init(string: callString)!))
+        }
+    }
+    
+    func sendSms(_ number: String) {
+        DispatchQueue.main.async {
+            let sendString = "sms://" + number
+            self.webView?.loadRequest(URLRequest(url: URL.init(string: sendString)!))
+        }
+    }
+    
+    func sendMail(_ mail: String) {
+        DispatchQueue.main.async {
+            let mailString = "mailto://" + mail
+            self.webView?.loadRequest(URLRequest(url: URL.init(string: mailString)!))
+        }
+    }
+    
 }

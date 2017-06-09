@@ -72,8 +72,6 @@ extension MainController: UIWebViewDelegate {
         jbridge.webView = webView
         // JS可以通过"jbridge"这个引用调用JBridge实例中的方法
         jscontext.setObject(jbridge, forKeyedSubscript: "jbridge" as (NSCopying & NSObjectProtocol)!)
-
-
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {

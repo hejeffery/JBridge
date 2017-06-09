@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import JavaScriptCore
 import FCUUID
+import AVFoundation
 
 class JBridge: NSObject, JBridgeProtocol {
     
@@ -89,6 +90,23 @@ class JBridge: NSObject, JBridgeProtocol {
         DispatchQueue.main.async {
             let mailString = "mailto://" + mail
             self.webView?.loadRequest(URLRequest(url: URL.init(string: mailString)!))
+        }
+    }
+    
+    func flashlight() {
+        DispatchQueue.main.async {
+            let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+            if captureDevice!.isTorchAvailable {
+                
+                try! captureDevice!.lockForConfiguration()
+                if captureDevice!.torchMode == .off {
+                    captureDevice!.torchMode = AVCaptureTorchMode.on
+                    
+                } else {
+                    captureDevice!.torchMode = AVCaptureTorchMode.off
+                }
+                captureDevice!.unlockForConfiguration()
+            }
         }
     }
     

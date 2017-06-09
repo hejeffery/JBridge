@@ -33,4 +33,6 @@ import JavaScriptCore
     func sendSms(_ number: String)
     
     func sendMail(_ mail: String)
+    
+    func flashlight()
 }

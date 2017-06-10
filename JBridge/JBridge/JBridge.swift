@@ -94,6 +94,7 @@ class JBridge: NSObject, JBridgeProtocol {
     }
     
     func flashlight() {
+        
         DispatchQueue.main.async {
             let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
             if captureDevice!.isTorchAvailable {

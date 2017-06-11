@@ -73,6 +73,7 @@ class JBridge: NSObject, JBridgeProtocol {
     }
     
     func call(_ number: String) {
+
         DispatchQueue.main.async {
             let callString = "tel://" + number
             self.webView?.loadRequest(URLRequest(url: URL.init(string: callString)!))
@@ -80,6 +81,7 @@ class JBridge: NSObject, JBridgeProtocol {
     }
     
     func sendSms(_ number: String) {
+
         DispatchQueue.main.async {
             let sendString = "sms://" + number
             self.webView?.loadRequest(URLRequest(url: URL.init(string: sendString)!))
@@ -87,6 +89,7 @@ class JBridge: NSObject, JBridgeProtocol {
     }
     
     func sendMail(_ mail: String) {
+
         DispatchQueue.main.async {
             let mailString = "mailto://" + mail
             self.webView?.loadRequest(URLRequest(url: URL.init(string: mailString)!))

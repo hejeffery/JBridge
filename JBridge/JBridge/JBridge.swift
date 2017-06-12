@@ -109,6 +109,7 @@ class JBridge: NSObject, JBridgeProtocol {
                 } else {
                     captureDevice!.torchMode = AVCaptureTorchMode.off
                 }
+
                 captureDevice!.unlockForConfiguration()
             }
         }

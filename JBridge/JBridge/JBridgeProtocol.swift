@@ -35,4 +35,6 @@ import JavaScriptCore
     func sendMail(_ mail: String)
     
     func flashlight()
+    
+    func locationInfo()
 }

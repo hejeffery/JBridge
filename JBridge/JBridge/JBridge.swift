@@ -115,4 +115,10 @@ class JBridge: NSObject, JBridgeProtocol {
         }
     }
     
+    func locationInfo() {
+        
+        DispatchQueue.main.async {
+            // TODO
+        }
+    }
 }

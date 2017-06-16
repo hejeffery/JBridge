@@ -126,7 +126,6 @@ extension TestController: UIWebViewDelegate {
         // 第二步：使用unsafeBitCast转换类型
         // 第三步：使用jscontext.setObject(alertViewObject, forKeyedSubscript: "showAlertView" as (NSCopying & NSObjectProtocol))
 
-
         // show alertView
         let showAlert: @convention(block) (String, String) -> () = { (title, message) in
             let alertView = UIAlertView.init(title: title,

@@ -31,6 +31,7 @@ class MainController: UIViewController {
         super.viewDidLoad()
         view.addSubview(webView)
         webView.frame = view.frame
+
     }
     
     override func didReceiveMemoryWarning() {

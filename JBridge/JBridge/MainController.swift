@@ -56,7 +56,6 @@ extension MainController: UIWebViewDelegate {
         
         jsContext = webView.value(forKeyPath: "documentView.webView.mainFrame.javaScriptContext") as? JSContext
         
-        
         guard let jscontext = jsContext else {
             return
         }

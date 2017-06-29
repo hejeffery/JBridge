@@ -72,6 +72,14 @@ class JBridge: NSObject, JBridgeProtocol {
         return UIDevice.current.systemName
     }
     
+    func call(_ number: String) {
+        
+        DispatchQueue.main.async {
+            let callString = "tel://" + number
+            self.webView?.loadRequest(URLRequest(url: URL.init(string: callString)!))
+        }
+    }
+    
     func sendSms(_ number: String) {
 
         DispatchQueue.main.async {

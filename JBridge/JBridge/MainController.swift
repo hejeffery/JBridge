@@ -63,7 +63,7 @@ extension MainController: UIWebViewDelegate {
         jscontext.exceptionHandler = { (context, exception) -> () in
             print("exception = \(String(describing: exception))")
         }
-        
+
         // 注入JBridge模型
         let jbridge = JBridge()
         jbridge.jsContext = jscontext
